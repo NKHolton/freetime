@@ -1,1 +1,9 @@
-<h1>Welcome to the FreeTime App</h1>
+<% @hobbies.each do |hobby| %>
+	<div>
+		<h1><%= hobby.hobby %></h1><br />
+		<i><%= hobby.description %></i><br />
+		<p><%= hobby.author %></p><br />
+	</div>
+
+	<hr />
+<% end %>
