@@ -1,9 +1,13 @@
 <% @hobbies.each do |hobby| %>
 	<div class="booyah-box col-xs-10 col-xs-offset-1">
-		<h1><%= hobby.hobby %></h1>
+		<h1><%= hobby.hobby %></h1><br />
 		<i><%= hobby.description %></i><br /><br />
-		<p><%= hobby.author %></p><br />
+		<div class="pull-right">
+			<p>-<%= hobby.author %></p><br />
+		</div>
 	</div>
 
 	<hr />
 <% end %>
+
+<%= will_paginate @hobbies %>
