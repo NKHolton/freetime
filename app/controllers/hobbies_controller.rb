@@ -8,3 +8,14 @@ class HobbiesController < ApplicationController
 	def new
 		@hobby = Hobby.new
 	end
+
+	def create
+		Hobby.create(hobby_params)
+		redirect_to root_path
+	end
+
+	private
+
+	def place_params
+		params.require(:hobby).permit(:hobby, :description, :author)
+	end
