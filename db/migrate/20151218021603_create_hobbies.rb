@@ -6,7 +6,7 @@ class CreateHobbies < ActiveRecord::Migration
     	t.text :description
     	t.string :author
 
-      t.timestamps
+        t.timestamps
     end
   end
 end
