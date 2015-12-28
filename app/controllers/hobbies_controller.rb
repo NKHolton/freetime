@@ -9,18 +9,13 @@ class HobbiesController < ApplicationController
 	end
 
 	def create
-		Hobby.create(hobby_params)
+		@hobby = Hobby.create(hobby_params)
 		redirect_to root_path
-	end
-
-	def show
-		@hobby = Hobby.find(params[:id])
-		@hobby = Hobby.new
 	end
 
 	private
 
 	def hobby_params
-		params.require(:hobby).permit(:hobby, :description, :author)
+		params.require(:hobby).permit(:hobby_name, :description, :author)
 	end
 end

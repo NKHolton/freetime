@@ -1,7 +1,7 @@
 <div class="booyah-box col-xs-10 col-xs-offset-1">
 	<h1>Enter Your Own Hobby</h1>
-	<%= simple_form_for @hobby, :url => new_hobby_path(@hobby) do |f| %>
-	  <%= f.input :hobby %>
+	<%= simple_form_for @hobby do |f| %>
+	  <%= f.input :hobby_name %>
 	  <%= f.input :description %>
 	  <%= f.input :author %>
 	  <br />
